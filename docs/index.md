@@ -3,16 +3,16 @@
 layout: home
 
 hero:
-  name: "godocs"
-  text: "Master and Learn Go"
-  tagline: My great project tagline
+  name: "golang"
+  text: "Learn & Master Go"
+  tagline: This docs is made so that I can track my learnings in Go.
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Start Learning
+      link: /getting-started
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Projects
+      link: /projects
 
 features:
   - title: Feature A
