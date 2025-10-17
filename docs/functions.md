@@ -49,13 +49,13 @@ This is only allowed inside functions and not at the package level. It automatic
 
     ```go
     func greet(name string, age int) {}
-    fun sum(a, b int) int {}
+    func sum(a, b int) int {}
     ```
 
 4. Return values: can return nothing, can return one value and can also return multiple values.
 
     ```go
-    fun hello(){
+    func hello(){
         fmt.Println("hello")
     }
 
@@ -63,7 +63,7 @@ This is only allowed inside functions and not at the package level. It automatic
         return x * x
     }
 
-    fun divide(a, b float64) (float64, error){
+    func divide(a, b float64) (float64, error){
         if b == 0{
             return 0, fmt.Errorf("Cannot divide by zero")
         }
@@ -105,7 +105,7 @@ func rectangle(width, height float64) (area, perimeter float64){
 These accept and unknown number of arguments, similar to `*args` in py.
 
 ```go
-fun sum(nums ...int) int{
+func sum(nums ...int) int{
     total := 0
     for _, n := range nums{
         total += n
@@ -164,7 +164,7 @@ fmt.Println(operate(3, 4, mul))
 `defer` runs a function after the surrounding function returns, even if it crashes midway.
 
 ```go
-fun main(){
+func main(){
     fmt.Println("Start")
     defer fmt.Println("the defer will print this at last...")
     fmt.Println("end")
