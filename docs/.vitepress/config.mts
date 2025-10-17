@@ -21,6 +21,12 @@ export default defineConfig({
                     { text: "Go Module", link: "/go-module" },
                 ],
             },
+
+            {
+                text: "Basic Syntax and Structure",
+                collapsed: false,
+                items: [{ text: "Functions", link: "/functions" }],
+            },
         ],
 
         socialLinks: [{ icon: "github", link: "https://github.com/prabeshstha11" }],

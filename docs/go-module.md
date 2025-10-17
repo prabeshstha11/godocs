@@ -53,3 +53,72 @@ Go Workspaces which was introduced in Go 1.18, workspaces allow you to work with
     ```bash
     go work sync
     ```
+
+## What is `go mod` for?
+
+`go mod` is a Go's module management system. It is like `npm init` in node js, `pip` or `uv sync` in python. It keeps track of the module's name, go version used, all the dependencies and their versions, checksums to verify integrity.
+
+When you run:
+
+```bash
+go mod init example.com/hello
+```
+
+Go creates a `go.mod` file like this:
+
+```go
+module example.com/hello
+
+go 1.25
+```
+
+When you add a dependency with `go get`, Go updates the `go.mod` file automatically.
+
+```go
+require(
+    github.com/user/project v0.1.1
+)
+```
+
+## Example
+
+```console
+myworkspace/
+│
+├── go.work
+│
+├── module1/
+│   ├── go.mod
+│   └── main.go
+│
+└── module2/
+    ├── go.mod
+    └── utils.go
+```
+
+Then run:
+
+```bash
+go work init ./module1 ./module2
+```
+
+The `go.work` will look like
+
+```go
+go 1.25
+
+use (
+    ./module1
+    ./module2
+)
+```
+
+## Summary
+
+| Command        | Purpose                                      |
+| -------------- | -------------------------------------------- |
+| `go mod init`  | Initializes a new module (creates `go.mod`). |
+| `go mod tidy`  | Cleans unused deps and adds missing ones.    |
+| `go get`       | Adds or updates a dependency.                |
+| `go work init` | Creates a workspace with multiple modules.   |
+| `go work sync` | Syncs module dependencies with workspace.    |
