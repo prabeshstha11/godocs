@@ -28,11 +28,11 @@ export default defineConfig({
                 collapsed: false,
                 items: [
                     { text: "Packages and Imports", link: "/packages-imports" },
-                    { text: "Functions", link: "/functions" },
                     { text: "Variables and Constants", link: "/variables-constants" },
                     { text: "Basic Data Types", link: "/data-types" },
                     { text: "Zero Values", link: "/zero-values" },
                     { text: "Type Conversion and Inference", link: "/type-conversion" },
+                    { text: "Functions", link: "/functions" },
                 ],
             },
             {
