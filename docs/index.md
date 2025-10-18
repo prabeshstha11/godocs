@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: Start Learning
-      link: /getting-started
+      link: /what-is-go
     - theme: alt
       text: Projects
       link: /projects
