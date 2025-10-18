@@ -16,11 +16,11 @@ export default defineConfig({
                 text: "Introduction to Go",
                 collapsed: false,
                 items: [
-                    { text: "What is Go? History and Design Philosophy", link: "/what-is-go" },
-                    { text: "Why Use Go? Simplicity, Concurrency, Performance", link: "/why-use-go" },
+                    { text: "What is Go?", link: "/what-is-go" },
+                    { text: "Why Use Go?", link: "/why-use-go" },
                     { text: "Installing Go and Setting Up Environment", link: "/installing-go" },
-                    { text: "Your First Go Program (hello.go)", link: "/hello-world" },
-                    { text: "Go Workspace and Modules (go mod init)", link: "/go-modules" },
+                    { text: "Your First Go Program", link: "/hello-world" },
+                    { text: "Go Workspace and Modules", link: "/go-modules" },
                 ],
             },
             {
